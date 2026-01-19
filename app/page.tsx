@@ -14,20 +14,20 @@ const projects = [
     image: "/images/vr-game.png",
   },
   {
-    title: "24h Code",
+    title: "Site internet Médical",
     description:
-      "Projet Universitaire en équipe pour créer une application web en 24h chrono sur le thème de l'écologie. Le lien mène au dépôt GitHub du projet.",
+      "Projet personnel de création d'un site internet pour un magasin médical",
     
-    link: "https://github.com/josueprlt/Project-Nuit-MMI",
-    image: "/images/ProjetMMi.png",
+    link: "https://www.rcsmedical.fr/",
+    image: "/images/RCS.png",
   },
   {
     title: "Yanotela",
     description:
-      "Nous somme en réalisation d'une application web de prise de note collaborative en temps réel",
+      "Réalisation d'une application web de prise de note collaborative en temps réel avec Next.js, Node.js, et Socket.io",
     tags: ["Next.js", "Tailwind CSS", "Animation"],
     link: "https://mmi-limoges.fr",
-    image: "/images/mmilimoges.png",
+    image: "/images/Yanotela.png",
   },
 ];
 

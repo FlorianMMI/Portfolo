@@ -11,13 +11,16 @@ export default function About() {
         { name: 'Illustrator', level: 80, category: 'design' },
         
         // Frontend Development
-        { name: 'React', level: 90, category: 'frontend' },
-        { name: 'Next.js', level: 85, category: 'frontend' },
-        { name: 'HTML', level: 95, category: 'frontend' },
+        { name: 'HTML', level: 100, category: 'frontend' },
+        { name: 'React', level: 95, category: 'frontend' },
+        { name: 'Next.js', level: 95, category: 'frontend' },
         { name: 'CSS', level: 90, category: 'frontend' },
         { name: 'JavaScript', level: 85, category: 'frontend' },
+        { name: 'TypeScript', level: 85, category: 'frontend' },
         { name: 'Tailwind CSS', level: 95, category: 'frontend' },
         { name: 'Sass', level: 85, category: 'frontend' },
+        { name: 'Vue.js', level: 70, category: 'frontend' },
+        { name: 'Flutter', level: 50, category: 'frontend' },
         
         // Backend & Database
         { name: 'MySQL', level: 100, category: 'backend' },
