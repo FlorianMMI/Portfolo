@@ -20,12 +20,14 @@ export default function About() {
         { name: 'Sass', level: 85, category: 'frontend' },
         
         // Backend & Database
+        { name: 'MySQL', level: 100, category: 'backend' },
+        { name: 'PostGres', level: 100, category: 'backend' },
+        { name: 'Symfony', level: 95, category: 'backend' },
         { name: 'Node.js', level: 90, category: 'backend' },
         { name: 'Express.js', level: 90, category: 'backend' },
         { name: 'PHP', level: 90, category: 'backend' },
-        { name: 'Symfony', level: 95, category: 'backend' },
-        { name: 'MySQL', level: 100, category: 'backend' },
-        { name: 'PostGres', level: 100, category: 'backend' },
+        
+        
         
         
         // Libraries & Frameworks
