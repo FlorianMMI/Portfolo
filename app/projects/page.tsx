@@ -3,61 +3,100 @@
 import { motion } from 'motion/react';
 import Link from 'next/link';
 
-export default function Projects() {
+const allProjects = [
+  
+  {
+    year: '2025',
+    title: 'Site RCS Médical',
+    description: 'Projet de création d\'un site internet pour un magasin médical',
+    category: 'Design & Dev',
+    link: 'https://www.rcsmedical.fr/',
+    image: '/images/RCS.png',
+  },
+  {
+    year: '2025',
+    title: 'Yanotela',
+    description: 'Application web de prise de note collaborative en temps réel',
+    category: 'Design , Dev & Management' ,
+    link: 'https://github.com/FlorianMMI/Yanotela',
+    image: '/images/yanotela.png',
+  },
+  {
+    year: '2024',
+    title: 'Jeux VR',
+    description: 'Réalisation d\'un Jeux en Réalité Virtuelle avec A-frame, GSAP, Three.js',
+    category: 'Dev',
+    link: 'https://florian-bounissou.fr/ClassTrouble/SAE402-4-api/',
+    image: '/images/vr-game.png',
+  },
+];
+
+export default function ProjectsPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300">
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+    <div className="bg-[#0a0a0a] min-h-screen pt-32 pb-20 px-8">
+      <div className="max-w-[1150px] mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="mb-24"
+        >
+          <p className="text-[#6a7282] text-sm font-mono mb-10">TOUS LES PROJETS</p>
+          <h1
+            className="text-5xl md:text-[72px] leading-tight md:leading-[72px] tracking-[-1.8px] font-light text-white mb-8"
+            style={{ fontFamily: 'Segoe UI, sans-serif' }}
           >
-            {/* Construction Icon */}
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="mb-8"
-            >
-              <div className="w-32 h-32 mx-auto bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
-                <svg className="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4" />
-                </svg>
-              </div>
-            </motion.div>
+            Mes réalisations
+          </h1>
+          <p className="text-[#6a7282] text-xl max-w-2xl">
+            Une sélection de projets web, applications et designs réalisés avec passion.
+          </p>
+        </motion.div>
 
-            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent mb-6 dark:from-blue-400 dark:via-purple-400 dark:to-blue-600">
-              Page en construction
-            </h1>
-            
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto transition-colors duration-300">
-              Je travaille actuellement sur cette section pour vous présenter mes meilleurs projets. 
-              Revenez bientôt pour découvrir mes réalisations !
-            </p>
-
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {allProjects.map((project, index) => (
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center"
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="group"
             >
-              <Link
-                href="/"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-full font-medium hover:shadow-lg transition-all duration-300 transform hover:scale-105 dark:from-blue-500 dark:to-purple-700"
-              >
-                Retour à l'accueil
-              </Link>
-              <Link
-                href="/about"
-                className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-full font-medium hover:border-blue-600 hover:text-blue-600 transition-all duration-300 dark:border-gray-600 dark:text-gray-200 dark:hover:border-blue-400 dark:hover:text-blue-400"
-              >
-                Découvrir mon profil
+              <Link href={project.link} target="_blank" rel="noopener noreferrer">
+                <div className="border border-white/10 hover:border-white/30 transition-colors duration-300 overflow-hidden">
+                  <img src={project.image} alt={project.title} className="w-full h-auto" />
+
+                  <div className="p-8 border-t border-white/10">
+                    <div className="flex items-center justify-between mb-4">
+                      <p className="text-[#4a5565] text-sm font-mono">{project.year}</p>
+                      <span className="text-[#6a7282] text-xs font-mono px-3 py-1 border border-white/10">
+                        {project.category}
+                      </span>
+                    </div>
+
+                    <h3
+                      className="text-white text-2xl tracking-[-0.9px] font-light mb-3 group-hover:text-white/80 transition-colors"
+                      style={{ fontFamily: 'Segoe UI, sans-serif' }}
+                    >
+                      {project.title}
+                    </h3>
+
+                    <p className="text-[#6a7282] text-sm mb-4">{project.description}</p>
+
+                    <div className="flex items-center text-white text-sm font-mono group-hover:translate-x-2 transition-transform duration-300">
+                      <span>VOIR LE PROJET</span>
+                      <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
               </Link>
             </motion.div>
-          </motion.div>
+          ))}
         </div>
-      </section>
+      </div>
     </div>
   );
 }

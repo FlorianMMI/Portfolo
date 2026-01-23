@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navigation from "./components/Navigation";
-import Footer from "./components/Footer";
-import { ThemeProvider } from "./contexts/ThemeContext";
+import MinimalNavigation from "./components/MinimalNavigation";
+import MinimalFooter from "./components/MinimalFooter";
+import SmoothScroll from "./components/SmoothScroll";
+import CustomCursor from "./components/CustomCursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,7 +18,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Florian Bounissou - Portfolio",
-  description: "Portfolio de Florian Bounissou, étudiant en BUT MMI3 à Limoges, spécialisé en développement web et applications interactives",
+  description: "Portfolio de Florian Bounissou, développeur full stack passionné par le code et les expériences digitales",
 };
 
 export default function RootLayout({
@@ -26,35 +27,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" suppressHydrationWarning>
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  var theme = localStorage.getItem('theme');
-                  if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                    document.documentElement.classList.add('dark');
-                  } else {
-                    document.documentElement.classList.remove('dark');
-                  }
-                } catch (e) {}
-              })();
-            `,
-          }}
-        />
-      </head>
+    <html lang="fr" className="cursor-none">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#0a0a0a] cursor-none`}
       >
-        <ThemeProvider>
-          <Navigation />
-          <main className="min-h-screen pt-16">
+        <CustomCursor />
+        <SmoothScroll>
+          <MinimalNavigation />
+          <main>
             {children}
           </main>
-          <Footer />
-        </ThemeProvider>
+          <MinimalFooter />
+        </SmoothScroll>
       </body>
     </html>
   );
