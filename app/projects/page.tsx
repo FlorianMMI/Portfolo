@@ -15,6 +15,14 @@ const allProjects = [
   },
   {
     year: '2025',
+    title: 'Habittracker',
+    description: 'Application de routine et de suivi des habitudes en Next.js & Typescript',
+    category: 'Design , Dev' ,
+    link: 'https://github.com/FlorianMMI/Habittracker',
+    image: '/images/Habittracker.png',
+  },
+  {
+    year: '2025',
     title: 'Yanotela',
     description: 'Application web de prise de note collaborative en temps réel',
     category: 'Design , Dev & Management' ,
