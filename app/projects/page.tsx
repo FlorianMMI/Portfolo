@@ -19,7 +19,7 @@ const allProjects = [
     description: 'Application web de prise de note collaborative en temps réel',
     category: 'Design , Dev & Management' ,
     link: 'https://github.com/FlorianMMI/Yanotela',
-    image: '/images/yanotela.png',
+    image: '/images/Yanotela.png',
   },
   {
     year: '2024',
