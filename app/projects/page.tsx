@@ -19,7 +19,7 @@ const allProjects = [
     description: 'Application de routine et de suivi des habitudes en Next.js & Typescript',
     category: 'Design , Dev' ,
     link: 'https://github.com/FlorianMMI/Habittracker',
-    image: '/images/Habittracker.png',
+    image: '/images/HabitTracker.png',
   },
   {
     year: '2025',
