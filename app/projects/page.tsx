@@ -7,7 +7,7 @@ const allProjects = [
   
   {
     year: '2025',
-    title: 'Site RCS Médical',
+    title: 'RCS Médical',
     description: 'Projet de création d\'un site internet pour un magasin médical',
     category: 'Design & Dev',
     link: 'https://www.rcsmedical.fr/',
@@ -15,10 +15,10 @@ const allProjects = [
   },
   {
     year: '2025',
-    title: 'Habittracker',
-    description: 'Application de routine et de suivi des habitudes en Next.js & Typescript',
+    title: 'Habit Tracker',
+    description: 'Application de routine et de suivi des habitudes en Next.js & Typescript. Le projet est Mobile',
     category: 'Design , Dev' ,
-    link: 'https://github.com/FlorianMMI/Habittracker',
+    link: 'https://habittracker-pi-silk.vercel.app/',
     image: '/images/HabitTracker.png',
   },
   {
@@ -34,7 +34,7 @@ const allProjects = [
     title: 'Jeux VR',
     description: 'Réalisation d\'un Jeux en Réalité Virtuelle avec A-frame, GSAP, Three.js',
     category: 'Dev',
-    link: 'https://florian-bounissou.fr/ClassTrouble/SAE402-4-api/',
+    link: 'https://fp-lajudie.fr/site',
     image: '/images/vr-game.png',
   },
 ];
@@ -91,6 +91,10 @@ export default function ProjectsPage() {
                     </h3>
 
                     <p className="text-[#6a7282] text-sm mb-4">{project.description}</p>
+
+                    <ul className="mb-6">
+                      {/* tech stack */}
+                    </ul>
 
                     <div className="flex items-center text-white text-sm font-mono group-hover:translate-x-2 transition-transform duration-300">
                       <span>VOIR LE PROJET</span>
