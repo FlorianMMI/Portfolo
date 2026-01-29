@@ -18,9 +18,9 @@ const projects = [
   },
   {
     year: '2024',
-    title: 'Jeux de réalité virtuelle',
+    title: 'VR-GAME',
     description: 'Jeux VR développé avec A-frame, GSAP et Three.js',
-    link: '/projects',
+    link: 'https://fp-lajudie.fr/site',
   },
 ];
 

@@ -13,7 +13,7 @@ const experiences: Experience[] = [
   {
     title: 'Stage : Yanola',
     description:
-      'Stage en cours de réalisation chez Yanola du 1er février 2024 au 22 Mai 2026.',
+      'Stage en cours de réalisation chez Yanola du 1er février 2025 au 22 Mai 2026.',
     side: 'right',
   },
   {
