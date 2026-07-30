@@ -20,13 +20,22 @@ export default function MinimalFooter() {
               Je suis disponible pour des projets freelance et des opportunités professionnelles.
               N'hésitez pas à me contacter.
             </p>
+            <div className="flex gap-8">
+              
+            
             <div className="pt-8">
               <Link
-                href="mailto:contact@example.com"
+                href="mailto:florianbounissoupro@gmail.com"
                 className="inline-block border border-white/20 px-12 py-4 text-white text-base hover:bg-white/10 transition-colors duration-300"
               >
                 ENVOYER UN MESSAGE
               </Link>
+            </div>
+            <div className='pt-8'>
+              <a href='/CV_Florian_Bounissou.pdf' download className="inline-block border border-white/20 px-12 py-4 text-white text-base hover:bg-white/10 transition-colors duration-300">
+                Télécharger mon CV
+              </a>
+            </div>
             </div>
           </div>
         </div>
