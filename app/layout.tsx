@@ -5,6 +5,9 @@ import MinimalNavigation from "./components/MinimalNavigation";
 import MinimalFooter from "./components/MinimalFooter";
 import SmoothScroll from "./components/SmoothScroll";
 import CustomCursor from "./components/CustomCursor";
+import { Analytics } from "@vercel/analytics/next"
+
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,6 +34,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#0a0a0a] cursor-none`}
       >
+        <Analytics />
         <CustomCursor />
         <SmoothScroll>
           <MinimalNavigation />
