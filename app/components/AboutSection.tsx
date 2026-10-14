@@ -11,9 +11,15 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
+    title: 'CDI : MobileIt',
+    description:
+      'Salarié en tant que développeur fullstack js chez MobileIt',
+    side: 'left',
+  },
+  {
     title: 'Stage : Yanola',
     description:
-      'Stage en cours de réalisation chez Yanola du 1er février 2025 au 22 Mai 2026.',
+      'Stage chez Yanola du 1er février 2025 pendant 16 semaine. Le stage consistait à réaliser une plateforme intranet pour centraliser le système de formation de l\'entreprise.',
     side: 'right',
   },
   {
@@ -31,7 +37,7 @@ const experiences: Experience[] = [
   {
     title: 'BUT MMI',
     description:
-      '3ème année de la formation en Métiers du Multimédia et de l\'Internet à l\'IUT de Limoges. Spécialisation en développement web.',
+      'Diplomé de la formation en Métiers du Multimédia et de l\'Internet à l\'IUT de Limoges. Spécialisation en développement web.',
     side: 'left',
   },
   {
